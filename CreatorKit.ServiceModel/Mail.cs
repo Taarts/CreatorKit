@@ -19,13 +19,13 @@ public abstract class CreateEmailBase
 {
     [ValidateNotEmpty]
     [Input(Type="EmailInput")]
-    public string Email { get; set; }
+    public string? Email { get; set; }
     [ValidateNotEmpty]
     [FieldCss(Field = "col-span-6 lg:col-span-3")]
-    public string FirstName { get; set; }
+    public string? FirstName { get; set; }
     [ValidateNotEmpty]
     [FieldCss(Field = "col-span-6 lg:col-span-3")]
-    public string LastName { get; set; }
+    public string? LastName { get; set; }
 }
 
 public abstract class RenderEmailBase

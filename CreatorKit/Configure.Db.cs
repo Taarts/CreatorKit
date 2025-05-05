@@ -13,16 +13,16 @@ namespace CreatorKit;
 public class SeedUser
 {
     public int Id { get; set; }
-    public string Email { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public string? Email { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
     public string[]? Roles { get; set; }
 }
 public class SeedContact
 {
-    public string Email { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public string? Email { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
     public MailingList MailingLists { get; set; }
 }
 

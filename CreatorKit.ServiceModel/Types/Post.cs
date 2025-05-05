@@ -128,14 +128,14 @@ public class CommentResult
     public int Id { get; set; }
     public int ThreadId { get; set; }
     public int? ReplyId { get; set; }
-    public string Content { get; set; }
+    public string? Content { get; set; }
     public int UpVotes { get; set; }
     public int DownVotes { get; set; }
     public int Votes { get; set; }
     public string? FlagReason { get; set; }
     public string? Notes { get; set; }
     public int AppUserId { get; set; }
-    public string DisplayName { get; set; }
+    public string? DisplayName { get; set; }
     public string? Handle { get; set; }
     public string? ProfileUrl { get; set; }
     public string? Avatar { get; set; } //overrides ProfileUrl

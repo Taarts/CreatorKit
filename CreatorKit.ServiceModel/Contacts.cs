@@ -9,11 +9,11 @@ namespace CreatorKit.ServiceModel;
 public class CreateContact : ICreateDb<Contact>, IReturn<Contact>
 {
     [ValidateNotEmpty]
-    public string Email { get; set; }
+    public string? Email { get; set; }
     [ValidateNotEmpty]
-    public string FirstName { get; set; }
+    public string? FirstName { get; set; }
     [ValidateNotEmpty]
-    public string LastName { get; set; }
+    public string? LastName { get; set; }
     public Source Source { get; set; }
 
     [Input(Type = "tag", EvalAllowableValues = "AppData.MailingListValues"), FieldCss(Field = "col-span-12")]
@@ -24,11 +24,11 @@ public class CreateContact : ICreateDb<Contact>, IReturn<Contact>
 public class SubscribeToMailingList : IPost, IReturnVoid
 {
     [ValidateNotEmpty]
-    public string Email { get; set; }
+    public string? Email { get; set; }
     [ValidateNotEmpty]
-    public string FirstName { get; set; }
+    public string? FirstName { get; set; }
     [ValidateNotEmpty]
-    public string LastName { get; set; }
+    public string? LastName { get; set; }
     public Source Source { get; set; }
     [Input(Type = "tag", EvalAllowableValues = "AppData.MailingListValues"), FieldCss(Field = "col-span-12")]
     public List<string>? MailingLists { get; set; }
@@ -70,11 +70,11 @@ public class QueryContacts : QueryDb<Contact>
 public class AdminCreateContact : IReturn<Contact>
 {
     [ValidateNotEmpty]
-    public string Email { get; set; }
+    public string? Email { get; set; }
     [ValidateNotEmpty]
-    public string FirstName { get; set; }
+    public string? FirstName { get; set; }
     [ValidateNotEmpty]
-    public string LastName { get; set; }
+    public string? LastName { get; set; }
     public Source Source { get; set; }
     [ValidateNotEmpty]
     [Input(Type = "tag", EvalAllowableValues = "AppData.MailingListValues"), FieldCss(Field = "col-span-12")]
@@ -133,7 +133,7 @@ public class QueryInvalidEmails : QueryDb<InvalidEmail> {}
 public class CreateInvalidEmail : ICreateDb<InvalidEmail>, IReturnVoid
 {
     [ValidateNotEmpty]
-    public string Email { get; set; }
+    public string? Email { get; set; }
     public InvalidEmailStatus Status { get; set; }
 }
 

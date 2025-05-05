@@ -41,8 +41,13 @@ public class AppHost : AppHostBase, IHostingStartup
     }
 
     public static void RegisterLicense() =>
-        Licensing.RegisterLicense("OSS BSD-3-Clause 2024 https://github.com/NetCoreApps/CreatorKit TsHchf3Hat2/T1AeeLIMaHp3JR0hgfO96KjlH208d15NqUYwm0G/qcI76DtTQzWDwsezh7CEuaZ5QEmow0ZoP3VNm/M9J2V8kaj2bRQ+00PjwVYwwFQgxwDP3g6QvTKCwbfkiPqO1cTeaQxCqGFpND3Ky9b8CQapMBI21XuES+s=");
+        Licensing.RegisterLicense("Individual (c) 2025 Patricia Amheiser SoVdCyFuKkkvbNrQ8qj5MUM35Eu3s5FBQ/ymbszdJogePSORfy0ey6mmDPCqsJXHbAdf+R6h7h0GPGBMM2QkhFfYdp1yftKGwxz6D/plP7rKuB1PBPYU4S0g6dMlk+Z89D0HSn+V/qul8WqrBJuo7zJGdJO6MXlMMMXYYbOEl1w=");
 }
+/* public static void RegisterLicense() =>
+    Licensing.RegisterLicense(
+        "Individual (c) 2025 Patricia Amheiser SoVdCyFuKkkvbNrQ8qj5MUM35Eu3s5FBQ/ymbszdJogePSORfy0ey6mmDPCqsJXHbAdf+R6h7h0GPGBMM2QkhFfYdp1yftKGwxz6D/plP7rKuB1PBPYU4S0g6dMlk+Z89D0HSn+V/qul8WqrBJuo7zJGdJO6MXlMMMXYYbOEl1w="
+    );
+ */
 
 public class MarkdigTransformer : IMarkdownTransformer
 {
@@ -50,3 +55,4 @@ public class MarkdigTransformer : IMarkdownTransformer
         Markdig.MarkdownExtensions.UseAdvancedExtensions(new Markdig.MarkdownPipelineBuilder()).Build();
     public string Transform(string markdown) => Markdig.Markdown.ToHtml(markdown, Pipeline);
 }
+

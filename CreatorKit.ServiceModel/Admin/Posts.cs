@@ -22,11 +22,11 @@ public class AdminQueryThreads : QueryDb<Thread>
 public class AdminUpdateThread : IPatchDb<Thread>, IReturn<Thread>
 {
     public int Id { get; set; }
-    public string Url { get; set; }
-    public string Description { get; set; }
-    public string ExternalRef { get; set; }
+    public string? Url { get; set; }
+    public string? Description { get; set; }
+    public string? ExternalRef { get; set; }
     public long? RefId { get; set; }
-    public string RefIdStr { get; set; }
+    public string? RefIdStr { get; set; }
     public DateTime CreatedDate { get; set; }
     public DateTime? ClosedDate { get; set; }
     public DateTime? DeletedDate { get; set; }
@@ -59,7 +59,7 @@ public class AdminUpdateComment : IPatchDb<Comment>, IReturn<Comment>
     public int? AppUserId { get; set; }
     public DateTime? DeletedDate { get; set; }
     [Input(Type = "textarea"), FieldCss(Field = "col-span-12", Input = "h-36")]
-    public string Content { get; set; }
+    public string? Content { get; set; }
 }
 [Tag(Tag.Admin)]
 [ValidateIsAdmin]

@@ -13,15 +13,15 @@ public class Migration1000 : MigrationBase
         [AutoIncrement]
         public int Id { get; set; }
         [Index(Unique = true)]
-        public string Url { get; set; }
-        public string Description { get; set; }
-        public string ExternalRef { get; set; }
+        public string? Url { get; set; }
+        public string? Description { get; set; }
+        public string? ExternalRef { get; set; }
         public int ViewCount { get; set; }
         [Default(1)]
         public long LikesCount { get; set; }
         public long CommentsCount { get; set; }
         public long? RefId { get; set; }
-        public string RefIdStr { get; set; }
+        public string? RefIdStr { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? ClosedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
@@ -83,13 +83,13 @@ public class Migration1000 : MigrationBase
         public int CommentId { get; set; }
     
         [Reference]
-        public Comment Comment { get; set; }
+        public Comment? Comment { get; set; }
     
         [References(typeof(AppUser))]
         public int AppUserId { get; set; }
     
         public PostReport PostReport { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         public DateTime CreatedDate { get; set; }
         public ModerationDecision Moderation { get; set; }

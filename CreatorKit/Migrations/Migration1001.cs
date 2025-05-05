@@ -61,8 +61,8 @@ public class Migration1001 : MigrationBase
     {
         [AutoIncrement]
         public int Id { get; set; }
-        public string Email { get; set; }
-        public string EmailLower { get; set; }
+        public string? Email { get; set; }
+        public string? EmailLower { get; set; }
         public InvalidEmailStatus Status { get; set; }
     }
 
